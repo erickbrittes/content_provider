@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingTop="25dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="@string/label_title_content_provider"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edittext_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/label_name"
+        android:padding="16dp"
+        android:textColorHint="@android:color/holo_blue_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edittext_grade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/label_grade"
+        android:padding="16dp"
+        android:textColorHint="@android:color/holo_blue_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edittext_name"
+        android:layout_marginTop="16dp"
+        android:onClick="onClickAddName"
+        android:padding="16dp"
+        android:text="@string/label_add_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_grade" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_retrive_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_add_name"
+        android:layout_alignStart="@+id/button_add_name"
+        android:layout_alignLeft="@+id/button_add_name"
+        android:layout_alignEnd="@+id/edittext_name"
+        android:layout_alignRight="@+id/edittext_name"
+        android:layout_marginTop="24dp"
+        android:onClick="onClickRetrieveStudents"
+        android:padding="16dp"
+        android:text="@string/label_retrive_student"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_add_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
